@@ -62,12 +62,12 @@
   };
 
   # dwm
-  #services.xserver.windowManager.dwm = {
-  #  enable = true;
-  #  package = pkgs.dwm.overrideAttrs {
-  #    src = ./config/dwm;
-  #  };
-  #};
+  services.xserver.windowManager.dwm = {
+    enable = true;
+    package = pkgs.dwm.overrideAttrs {
+      src = ./config/dwm;
+    };
+  };
 
   services.displayManager.ly.enable = true;
 
