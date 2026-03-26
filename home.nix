@@ -6,9 +6,9 @@
   home.username = "troy";
   home.homeDirectory = "/home/troy";
 
-  imports = [
-    ./modules/suckless.nix
-  ];
+  #imports = [
+  #  ./modules/suckless.nix
+  #];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -80,7 +80,7 @@
     #qbittorrent
 
     # browser
-    #w3m
+    w3m
     #qutebrowser
     # surf
 
@@ -91,7 +91,7 @@
     #ngspice
 
     # documents
-    #zathura
+    zathura
     libreoffice
     #wordgrinder
     #sc

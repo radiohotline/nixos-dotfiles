@@ -106,7 +106,7 @@
     description = "Troy";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  kdePackages.kate
+       kdePackages.kate
     #  thunderbird
     ];
   };
@@ -122,6 +122,9 @@
   environment.systemPackages = with pkgs; [
     # editors
     vim
+    
+    # terminal
+    st
 
     # util
     tmux  
@@ -150,13 +153,6 @@
 
     # browser
     links2
-
-    # lib
-    #libgcrypt
-    #glib
-    #pixman
-    #SDL2
-    #libslirp
 
     # wm
     # kde
