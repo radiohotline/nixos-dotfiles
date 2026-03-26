@@ -1,7 +1,7 @@
 [submodule "config/dwm"]
 	path = config/dwm
-	url = https://github.com/radiohotline/dwm.git
+	url = ./config/dwm
 
 [submodule "config/st"]
 	path = config/st
-	url = https://github.com/radiohotline/st.git
+	url = ./config/st
