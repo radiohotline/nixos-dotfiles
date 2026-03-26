@@ -200,6 +200,7 @@ in
   # programs
   programs.neovim = {
     enable = true;
+    vimAlias = true;
   };  
 
   # services
