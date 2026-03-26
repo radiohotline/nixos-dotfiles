@@ -1,5 +1,13 @@
 { config, pkgs, ... }:
 
+let
+  dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  configs = {
+    nvim = "nvim";
+  };
+in
+
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -9,6 +17,14 @@
   #imports = [
   #  ./modules/suckless.nix
   #];
+
+  # configs
+  xdg.configFile = builtins.mapAttrs
+    (name: subpath: {
+      source = create_symlink "${dotfiles}/${subpath}";
+      recursive = true;
+    })
+    configs;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -182,7 +198,9 @@
   xsession.enable = true;
 
   # programs
-  #programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+  };  
 
   # services
   #services.mpd.enable = true;
