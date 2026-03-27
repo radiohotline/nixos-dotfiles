@@ -75,16 +75,10 @@
         pkgs.xorg.libXft 
         pkgs.xorg.libxcb 
       ];
-
-      #prePatch = ''
-      #  sed -i "s@/usr/local@$out@g" config.mk
-      #'';
     });
   };
 
   services.displayManager.ly.enable = true;
-
-  services.picom.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   #services.displayManager.sddm.enable = true;
@@ -178,8 +172,11 @@
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum    
 
-    # dwm
-    libxcb
+    # dwm 
+    xorg.libX11 
+    xorg.libXinerama 
+    xorg.libXft 
+    xorg.libxcb 
   ];
 
   programs.ssh.startAgent = true;
