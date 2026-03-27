@@ -64,9 +64,22 @@
   # dwm
   services.xserver.windowManager.dwm = {
     enable = true;
-    package = pkgs.dwm.overrideAttrs {
+    package = pkgs.dwm.overrideAttrs (oldAttrs: {
       src = ./config/dwm;
-    };
+
+      nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [ pkgs.pkg-config ];
+
+      buildInputs = oldAttrs.buildInputs ++ [ 
+        pkgs.xorg.libX11 
+        pkgs.xorg.libXinerama 
+        pkgs.xorg.libXft 
+        pkgs.xorg.libxcb 
+      ];
+
+      #prePatch = ''
+      #  sed -i "s@/usr/local@$out@g" config.mk
+      #'';
+    });
   };
 
   services.displayManager.ly.enable = true;
@@ -156,7 +169,8 @@
     # build
     tinycc
     libgcc
-    gnumake
+    gcc
+	gnumake
     pkg-config    
 
     # browser
@@ -168,6 +182,7 @@
     kdePackages.qtstyleplugin-kvantum    
 
     # dwm
+    libxcb
   ];
 
   programs.ssh.startAgent = true;
