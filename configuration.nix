@@ -84,7 +84,7 @@
 
   services.displayManager.ly.enable = true;
 
-  services.xserver.picom.enable = true;
+  services.picom.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   #services.displayManager.sddm.enable = true;
