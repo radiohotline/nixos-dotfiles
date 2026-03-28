@@ -204,7 +204,7 @@ in
   # services
   # mpd
   services.mpd = {
-	enable = true;
+	enable = false;
 	musicDirectory = "/home/troy/Music";
 	extraConfig = ''
 		audio_output {
@@ -212,6 +212,10 @@ in
 		  name	"PipeWire output"
 		}
 	'';
+  };
+
+  services.mpd-discord-rpc = {
+	enable = false;
   };
 
   # ssh
