@@ -70,7 +70,6 @@ in
 
     # wm util
     #dwmblocks
-    #dmenu
     #dunst
 
     # wayland
@@ -79,7 +78,6 @@ in
 
     # shell + terminal
     #rc
-    # st
 
     # utility
     plan9port
@@ -114,9 +112,9 @@ in
     #logseq
 
     # audio/video
-    #cmus
-    #rmpc
-    #mpc
+    cmus
+    rmpc
+    mpc
     strawberry
     #vlc
     #mpv
@@ -135,8 +133,8 @@ in
 
     # graphics
     #gimp
-    #feh
-    #nsxiv
+    feh
+    nsxiv
     #imagemagick
 
     # fun
@@ -204,7 +202,17 @@ in
   };  
 
   # services
-  #services.mpd.enable = true;
+  # mpd
+  services.mpd = {
+	enable = true;
+	musicDirectory = "/home/troy/Music";
+	extraConfig = ''
+		audio_output {
+		  type	"pipewire"
+		  name	"PipeWire output"
+		}
+	'';
+  };
 
   # ssh
   programs.ssh = {

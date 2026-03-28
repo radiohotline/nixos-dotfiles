@@ -26,6 +26,15 @@
 	];
   };
 
+  fileSystems."/home/troy/Music" = {
+	device = "troy@192.168.1.45:/mnt/void/troy/Music";
+	fstype = "sshfs";
+	options = [
+	  "default_permissions"
+	  "IdentityFile=/home/troy/.ssh/inspiron"
+	];
+  };
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
