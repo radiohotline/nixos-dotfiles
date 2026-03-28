@@ -26,16 +26,16 @@
 	];
   };
 
-  fileSystems."/home/troy/Music" = {
-	device = "troy@inspiron:/mnt/void/home/troy/Music";
-	fsType = "sshfs";
-	options = [
-	  "allow_other"
-	  "reconnect"
-	  "ServerAliveInterval=15"
-	  "IdentityFile=/home/troy/.ssh/inspiron"
-	];
-  };
+#  fileSystems."/home/troy/Music" = {
+#	device = "troy@inspiron:/mnt/void/home/troy/Music";
+#	fsType = "sshfs";
+#	options = [
+#	  "allow_other"
+#	  "reconnect"
+#	  "ServerAliveInterval=15"
+#	  "IdentityFile=/home/troy/.ssh/inspiron"
+#	];
+#  };
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
