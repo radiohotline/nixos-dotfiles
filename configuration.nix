@@ -14,6 +14,18 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Filesystems.
+  fileSystems."/home/troy/Data" = {
+	device = "/dev/disk/by-uuid/4E12A7F212A7DCE9";
+	fsType = "ntfs";
+	options = [
+	  "users"
+	  "nofail"
+	  "exec"
+	  "x-gvfs-show"
+	];
+  };
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
