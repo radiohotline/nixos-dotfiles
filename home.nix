@@ -121,6 +121,8 @@ in
     #pavucontrol
     #jellytui
     #jellyfin-tui
+	finamp
+	jellyfin-desktop
 
     # files
     #lf
