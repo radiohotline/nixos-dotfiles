@@ -59,6 +59,7 @@
     enable = true;
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
+	enableCtrlAltBackspace = true;
   };
 
   # dwm
