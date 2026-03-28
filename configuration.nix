@@ -28,8 +28,11 @@
 
   fileSystems."/home/troy/Music" = {
 	device = "troy@inspiron:/mnt/void/home/troy/Music";
-	fstype = "sshfs";
+	fsType = "sshfs";
 	options = [
+	  "allow_other"
+	  "reconnect"
+	  "ServerAliveInterval=15"
 	  "IdentityFile=/home/troy/.ssh/inspiron"
 	];
   };
