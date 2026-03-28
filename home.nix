@@ -109,7 +109,7 @@ in
     libreoffice
     #wordgrinder
     #sc
-    #logseq
+    logseq
 
     # audio/video
     #rmpc
