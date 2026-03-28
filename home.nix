@@ -218,6 +218,12 @@ in
       
       Host *
         IdentityFile ~/.ssh/github
+	
+	  Host inspiron
+	    Hostname 192.168.1.45
+		Port 42069
+		User troy
+		IdentityFile ~/.ssh/inspiron
     ";
   };
 }
