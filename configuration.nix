@@ -27,10 +27,9 @@
   };
 
   fileSystems."/home/troy/Music" = {
-	device = "troy@192.168.1.45:/mnt/void/troy/Music";
+	device = "troy@inspiron:/mnt/void/home/troy/Music";
 	fstype = "sshfs";
 	options = [
-	  "default_permissions"
 	  "IdentityFile=/home/troy/.ssh/inspiron"
 	];
   };
