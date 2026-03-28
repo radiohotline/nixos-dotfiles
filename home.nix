@@ -112,9 +112,8 @@ in
     #logseq
 
     # audio/video
-    cmus
-    rmpc
-    mpc
+    #rmpc
+    #mpc
     strawberry
     #vlc
     #mpv
@@ -199,7 +198,9 @@ in
   programs.neovim = {
     enable = true;
     vimAlias = true;
-  };  
+  };
+
+  programs.cmus.enable = true;
 
   # services
   # mpd
