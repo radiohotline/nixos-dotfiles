@@ -58,7 +58,8 @@ in
     # '')
     
     # editors
-    vscodium
+    #vscodium
+	vscodium-fhs
     edwood
 
     # wm
@@ -116,7 +117,7 @@ in
     #mpc
     strawberry
     #vlc
-    #mpv
+    mpv
     #ffmpeg
     #pavucontrol
     #jellytui
@@ -203,6 +204,9 @@ in
   };
 
   programs.cmus.enable = true;
+
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 
   # services
   # mpd
